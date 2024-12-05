@@ -17,18 +17,22 @@
                                         placeholder="Nama Lengkap" required>
                                 </div>
 
-                                <div class="col-lg-12 col-12">
+                                <div class="col-lg-6 col-12">
                                     <input type="email" name="email" id="email" pattern="[^ @]*@[^ @]*"
                                         class="form-control" placeholder="Email" required>
                                 </div>
+                                <div class="col-lg-6 col-12">
+                                    <input type="number" name="phone" id="phone" class="form-control"
+                                        placeholder="No Telp" required>
+                                </div>
 
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" name="provinsi" id="provinsi" class="form-control"
-                                        placeholder="Asal Provinsi" required>
+                                    <input type="number" name="nik" id="nik" class="form-control"
+                                        placeholder="NIK" required>
                                 </div>
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" name="kab_kota" id="kota" class="form-control"
-                                        placeholder="Asal Kota/Kabupaten" required>
+                                    <input type="text" name="address" id="address" class="form-control"
+                                        placeholder="Alamat" required>
                                 </div>
 
                             </div>

@@ -83,7 +83,7 @@
                                                 <th>Labeling Interval Sub Kriteria</th>
                                                 <th>Nilai Interval(Bobot)</th>
 
-                                                {{-- <th class="text-center">Edit</th> --}}
+                                                <th class="text-center">Action</th>
 
 
                                             </tr>
@@ -97,7 +97,7 @@
 
 
 
-                                                    {{-- <td>
+                                                    <td>
                                                         <div
                                                             class="d-flex order-actions justify-content-center align-items-center">
                                                             <a type="button" data-bs-toggle="modal"
@@ -203,7 +203,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </td> --}}
+                                                    </td>
                                                 </tr>
                                             @endforeach
 

@@ -33,22 +33,29 @@ class KriteriaController extends Controller {
         KategoriModel::create(attributes: $data);
         return back()->with('success', 'Data Siswa Berhasil Ditambahkan!');
     }
-    public function destroy(string $id): RedirectResponse
-    {
-        // Mencari data kategori berdasarkan ID
-    $data = KategoriModel::find($id);
+public function destroy(string $id): RedirectResponse
+{
+    // Mencari data kategori berdasarkan ID
+    $kategori = KategoriModel::find($id);
 
     // Memeriksa apakah kategori ditemukan
-    if (!$data) {
+    if (!$kategori) {
         return back()->with('error', 'Kategori tidak ditemukan.');
     }
 
+    // Menghapus subkategori yang terkait
+    $subKategori = SubKategoriModel::where('id_kategori', $id);
+    if ($subKategori->exists()) {
+        $subKategori->delete();
+    }
+
     // Menghapus kategori
-    $data->delete();
+    $kategori->delete();
 
     // Mengembalikan respon dengan pesan sukses
-    return back()->with('success', 'Kategori berhasil dihapus.');
-    }
+    return back()->with('success', 'Kategori dan subkategori terkait berhasil dihapus.');
+}
+
      public function update(String $id, Request $request): RedirectResponse
     {
         $request->validate([

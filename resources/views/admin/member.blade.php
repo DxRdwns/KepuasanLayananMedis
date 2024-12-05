@@ -33,9 +33,13 @@
                                     <tr>
                                         <th>No</th>
                                         <th>Nama</th>
+                                        <th>NIK</th>
                                         <th>Email</th>
-                                        <th>Provinsi</th>
-                                        <th>Kabupaten/Kota</th>
+                                        <th>Phone</th>
+                                        <th>Alamat</th>
+                                        <th>Tanggal</th>
+                                        <th>Score</th>
+                                        <th>Quality</th>
 
                                     </tr>
                                 </thead>
@@ -44,9 +48,13 @@
                                         <tr>
                                             <th>{{ $loop->iteration }}</th>
                                             <td>{{ $item->name }}</td>
+                                            <td>{{ $item->nik }}</td>
                                             <td>{{ $item->email }}</td>
-                                            <td>{{ $item->provinsi }}</td>
-                                            <td>{{ $item->kab_kota }}</td>
+                                            <td>{{ $item->phone }}</td>
+                                            <td>{{ $item->address }}</td>
+                                            <td>{{ $item->created_at }}</td>
+                                            <td>{{ $item->score }}</td>
+                                            <td>{{ $item->quality }}</td>
 
 
 

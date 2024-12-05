@@ -9,7 +9,7 @@ class MemberModel extends Model
     
     protected  $table  = 'member_models';
     protected $primaryKey ='id';
-    protected $fillable = ['id','name','email','provinsi','kab_kota'];
+    protected $fillable = ['id','name','email','address','phone','nik','score','quality'];
     protected $timestamp = true;
 
 }

@@ -54,13 +54,10 @@
 
                 <div class="col-lg-6 col-md-6 col-12">
                     <h2 class="mb-lg-3 mb-3">Tentang</h2>
-
-                    <p>Sistem Cek Kepuasan Medis merupakan platform digital yang dirancang untuk mengukur dan menganalisis
-                        tingkat kepuasan pasien terhadap layanan medis yang diterima. Melalui sistem ini, pasien dapat
-                        memberikan feedback secara langsung mengenai pengalaman mereka di fasilitas kesehatan, baik itu dari
-                        aspek pelayanan dokter, perawat, fasilitas, hingga proses administrasi.
-                    </p>
-
+                    @foreach ($about as $item)
+                        <p>{{ $item->about }}
+                        </p>
+                    @endforeach
 
                 </div>
 

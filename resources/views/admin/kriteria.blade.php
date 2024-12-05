@@ -75,7 +75,7 @@
                                                 <th>No</th>
                                                 <th>Kriteria</th>
 
-                                                {{-- <th class="text-center">Action</th> --}}
+                                                <th class="text-center">Action</th>
 
 
                                             </tr>
@@ -88,7 +88,7 @@
                                                     <td>{{ $item->name_kategori }}</td>
 
 
-                                                    {{-- <td>
+                                                    <td>
                                                         <div
                                                             class="d-flex order-actions justify-content-center align-items-center">
                                                             <a type="button" data-bs-toggle="modal"
@@ -113,7 +113,7 @@
                                                                             <div class="modal-body">
 
                                                                                 <div class="row gy-3">
-                                                                                    <div class="col-md-6">
+                                                                                    <div class="col-md-12">
                                                                                         <input id="todo-input"
                                                                                             type="text"
                                                                                             placeholder="Kategori"
@@ -164,10 +164,15 @@
                                                                             <div class="modal-body">
 
                                                                                 <div class="row mb-3">
-                                                                                    <p>Apa anda ingin menghapus kriteria
-                                                                                        <b>
-                                                                                            {{ $item->name_kategori }}</b>?
+                                                                                    <p>Jika anda Menghapus
+                                                                                        <b>{{ $item->name_kategori }}</b>
+                                                                                        maka subkriteria
+                                                                                        dengan
+
                                                                                     </p>
+                                                                                    <p>kategori
+                                                                                        {{ $item->name_kategori }} akan
+                                                                                        terhapus!</p>
                                                                                 </div>
 
 
@@ -184,7 +189,7 @@
                                                             </div>
                                                         </div>
 
-                                                    </td> --}}
+                                                    </td>
                                                 </tr>
                                             @endforeach
 

@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--favicon-->
-    <link rel="icon" href="{{ asset('assets/images/LogoMA.png') }}" type="image/png" />
+    <link rel="icon" href="" type="image/png" />
     <!--plugins-->
     <link href="{{ asset('assets/plugins/notifications/css/lobibox.min.css') }}" rel="stylesheet" />
     <link href="{{ asset('assets/plugins/vectormap/jquery-jvectormap-2.0.2.css') }}" rel="stylesheet" />
@@ -46,7 +46,14 @@
             <!--navigation-->
             <ul class="metismenu" id="menu">
 
+                <li>
+                    <a href="{{ url('/admin/dashboard') }}">
+                        <div class="parent-icon"><i class="bx bx-home-circle"></i>
+                        </div>
+                        <div class="menu-title">Dashboard</div>
+                    </a>
 
+                </li>
                 <li>
                     <a href="{{ url('/admin/member') }}">
                         <div class="parent-icon"><i class="bx bx-user"></i>
@@ -87,6 +94,17 @@
 '></i>
                         </div>
                         <div class="menu-title">Interval Sub Kriteria</div>
+                    </a>
+
+
+                </li>
+                <li>
+
+
+                    <a href="{{ url('/admin/about') }}">
+                        <div class="parent-icon"><i class='bx bx-comment-detail'></i>
+                        </div>
+                        <div class="menu-title">About</div>
                     </a>
 
 
@@ -311,6 +329,8 @@
     <script src="{{ asset('assets/plugins/sparkline-charts/jquery.sparkline.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/datatable/js/dataTables.bootstrap5.min.js') }}"></script>
+
+    <script src="{{ asset('assets/plugins/chartjs/js/chartjs-custom.js') }}"></script>
     <!--notification js -->
     <script src="{{ asset('assets/plugins/notifications/js/lobibox.min.js') }}"></script>
     <script src="{{ asset('assets/plugins/notifications/js/notifications.min.js') }}"></script>

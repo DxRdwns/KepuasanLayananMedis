@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\SubKriteriaController;
 use App\Http\Controllers\Admin\IntervallSubKriteriaController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\MemberController;
+use App\Http\Controllers\Admin\AboutController;
 
 use Illuminate\Support\Facades\Route;
 
@@ -26,6 +27,8 @@ Route::middleware('auth')->group(function () {
     // Admin Routes
 Route::get('/admin/dashboard', action: [DashboardController::class, 'index']);
 Route::get('/admin/member', action: [MemberController::class, 'index'])->name('admin.member');
+Route::get('/admin/about', action: [AboutController::class, 'index']);
+Route::post('/admin/about/update/{id}', action: [AboutController::class, 'update']);
 
 
 Route::get('/admin/kriteria', action: [KriteriaController::class, 'index']);

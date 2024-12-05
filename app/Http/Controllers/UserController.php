@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\IntervalSubKategoriModel;
 use App\Models\KategoriModel;
+use App\Models\AboutModel;
 use App\Models\MemberModel;
 use App\Models\SubKategoriModel;
 use Illuminate\Http\Request;
@@ -13,7 +14,10 @@ class UserController extends Controller
 {
     public function home(): View
     {
-        return view('user.index');
+        $data = ([
+            'about' => AboutModel::where('id','=',1)->get(),
+        ]);
+        return view('user.index',$data);
     }
     public function petunjuk(): View
     {
@@ -40,8 +44,9 @@ class UserController extends Controller
         'question' => 'required|array',
         'name' => 'required',
         'email' => 'required',
-        'provinsi' => 'required',
-        'kab_kota' => 'required',
+        'phone' => 'required',
+        'address' => 'required',
+        'nik' => 'required',
     ]);
 
     // Simpan data pertanyaan dan bobot sementara di session
@@ -57,8 +62,9 @@ class UserController extends Controller
             'id_kategori' => $bobotValue,
             'name' => $request->name,
             'email' => $request->email,
-            'provinsi' => $request->provinsi,
-            'kab_kota' => $request->kab_kota,
+            'phone' => $request->phone,
+            'address' => $request->address,
+            'nik' => $request->nik,
             
         ];
     }
@@ -152,9 +158,13 @@ if ($nilaiDesimal <= 20) {
 $mem = ([
    'name' => $feedbackData[0]['name'],
     'email' => $feedbackData[0]['email'],
-    'provinsi' => $feedbackData[0]['provinsi'],
-    'kab_kota' => $feedbackData[0]['kab_kota'],
+    'phone' => $feedbackData[0]['phone'],
+    'address' => $feedbackData[0]['address'],
+    'nik' => $feedbackData[0]['nik'],
+    'score' =>$nilaiDesimal,
+    'quality' => $keterangan,
 ]);
+
         MemberModel::create($mem);
     // Tampilkan view hasil
     return view('user.hasil', compact('feedbackData','totalNilaiAkhir','nilaiDesimal','keterangan','nilaiAkhir','hitNorm', 'totalNilai', 'hitBobot'));

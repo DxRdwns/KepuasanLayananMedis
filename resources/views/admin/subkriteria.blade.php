@@ -86,6 +86,7 @@
                                                 <th>No</th>
                                                 <th>Sub Kriteria</th>
                                                 <th>Kriteria</th>
+                                                <th class="text-center">Action</th>
 
                                             </tr>
                                         </thead>
@@ -97,7 +98,7 @@
                                                     <td>{{ $item->kategori->name_kategori }}</td>
 
 
-                                                    {{-- <td>
+                                                    <td>
                                                         <div
                                                             class="d-flex order-actions justify-content-center align-items-center">
                                                             <a type="button" data-bs-toggle="modal"
@@ -185,17 +186,13 @@
                                                                             method="post" enctype="multipart/form-data">
                                                                             @csrf
                                                                             <div class="modal-body">
+                                                                                Apa anda ingin menghapus subkriteria :<b>
+                                                                                    {{ $item->nama_subkategori }}</b>
+                                                                                dengan kriteria :
+                                                                                <b>{{ $item->id_kategori }}</b>
+                                                                                ?
 
-                                                                                <div class="row mb-3">
-                                                                                    <p>Apa anda ingin menghapus subkriteria
-                                                                                        :
-                                                                                        <b>
-                                                                                            {{ $item->nama_subkategori }}</b>
-                                                                                        dengan kriteria :
-                                                                                        <b>{{ $item->id_kategori }}</b>
-                                                                                        ?
-                                                                                    </p>
-                                                                                </div>
+
 
 
 
@@ -210,7 +207,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                    </td> --}}
+                                                    </td>
                                                 </tr>
                                             @endforeach
 
