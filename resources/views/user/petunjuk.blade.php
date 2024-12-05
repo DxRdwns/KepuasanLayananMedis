@@ -45,9 +45,13 @@
                     <div class="row g-0 justify-content-end justify-content-md-around align-items-start timeline-nodes">
                         <div class="col-9 col-md-5 me-md-4 me-lg-0 order-3 order-md-1 timeline-content bg-white shadow-lg">
                             <h3 class=" text-light">Petunjuk</h3>
+                            <li>
+                                <ul>Mengisi Biodata Anda</ul>
+                                <ul>Memasukan Data Cek Kepuasan Layanan</ul>
+                                <ul>Mengidentifikasi Jenis Kepuasan Masyarakat Terhadap Kualitas Layanan Medis</ul>
+                                <ul>Melihat Hasil Penilaian Kepuasan Masyarakat Terhadap Kualitas Layanan</ul>
+                            </li>
 
-                            <p>Bagian dalam website yang memberikan panduan langkah-langkah kepada pengguna untuk membantu
-                                mereka memahami cara menggunakan fitur atau layanan yang tersedia.</p>
                         </div>
 
                         <div class="col-3 col-sm-1 order-2 timeline-icons text-md-center">
